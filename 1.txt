@@ -1,0 +1,35 @@
+—) BasyChevetkov Add files via upload 1)
+
+&X1 contributor
+
+27 lines (27 sloc) VEY ad 1)
+
+WD)
+
+1)
+a=input('enter ur name: ')
+print('Hello, ', a)
+2)
+a=float(input('Введите длину ' ))
+b=float(input('Введите ширину '))
+print( 'Площадь:' ,a*b)
+3)
+n=int(input('Введите n ' ))
+print('Сумма равна', (1+n)*n*0.5)
+4)
+h=int(input('Введите часы '))
+m=int(input('Введите минуты '))
+s=int(input('Введите секунды '))
+print("Всего секунд ", h*3600+m*60+s)
+5)
+h=float(input('Введите рост '))
+w=int(input('Введите вес '))
+print("ИМТ: ", w/(h*h))
+6)
+n=int(input("Введите целое число "))
+summ=0
+while n>0:
+   digit=n % 10
+   summ=summ+digit
+   n=n//10
+print("Сумма цифр: ", summ)
