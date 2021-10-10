@@ -1,0 +1,53 @@
+1)
+x=int(input('Введите число:'))
+x=x % 2
+if x== 0:
+print('Число четное')
+else:
+print('Число нечетное')
+2)
+x=int(input('Введите темпиратуру в цельсиях:'))
+x=x*1.8+32
+print("Темпиратура в фаренгейтах =" ,x)
+3)
+x=int(input('Введите число:'))
+if x%5!=0 and x%7!=0:
+ print("00")
+elif x%5==0 and x%7!=0:
+ print("01")
+elif x%7==0 and x%5!=0:
+ print("10")
+elif x%7==0 and x%5==0:
+ print("11")
+4)
+print('Введите коэффиценты уравнения ах^2+bx+c=0')
+a=int(input('Коэффицент а:'))
+b=int(input('Коэффицент b:'))
+c=int(input('Коэффицент c:'))
+d=b**2-4*a*c
+if d==0:
+ x=(-b+d**(0.5))/2*a
+ print ('Корень уравнения= ',x)
+elif d>0:
+ x1=(-b+d**(0.5))/2*a
+ x2=(-b-d**(0.5))/2*a
+ print ('Первый корень уравнения= ', x1)
+ print ('Второй корень уравнения= ', x2)
+elif d<0:
+ print('Решений нет')
+5)
+import random
+number = random.randint(1,n)
+print('Какое число загадал компьютер?')
+vvod=0
+for vvod in range(k):
+     vvod=int(input('Ваше предположние-'))
+     if number==vvod:
+      print("Ура !!! угадали")
+     elif vvod>number:
+      print ("Загаданное число меньше")
+     elif vvod<number:
+      print ("Загаданное число больше")
+if number!=vvod:
+     print("Вы проиграли(")
+     print("Загаданооне число=",number)
