@@ -74,7 +74,7 @@ for vowel in 'ёуеыаоэяию':
     gl += text.count(vowel)
 print("Колво гласных:",gl)
 sgl = 0
-for vowel in 'йцкнгшщзхфвпрлджчсмтб':
-    sgl += text.count(vowel)
+for consonant in 'йцкнгшщзхфвпрлджчсмтб':
+    sgl += text.count(consonant)
 print("Колво согласных:",sgl)
 
