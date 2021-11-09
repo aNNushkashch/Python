@@ -1,0 +1,80 @@
+1)
+n=int(input('Число сравнения:'))
+list=[]
+def sravn():
+    t=int(input('Число:'))
+    if t>n:
+       list.append(t) 
+for x in range(5):
+    sravn()
+print(list,"> n")
+
+2)(Без вложенных функций не совсем понимаю как их можно использовать при разных переменных)
+
+str1=str2=str3=st1=st2=st3=d=0
+x1y1=int(input('Число c координатами (x1y1):'))
+x2y1=int(input('Число c координатами (x2y1):'))
+x3y1=int(input('Число c координатами (x3y1):'))
+x1y2=int(input('Число c координатами (x1y2):'))
+x2y2=int(input('Число c координатами (x2y2):'))
+x3y2=int(input('Число c координатами (x3y2):'))
+x1y3=int(input('Число c координатами (x1y3):'))
+x2y3=int(input('Число c координатами (x2y3):'))
+x3y3=int(input('Число c координатами (x3y3):'))
+import numpy as tg
+A =tg.array([[x1y1, x2y1, x3y1], [x1y2, x2y2, x3y2], [x1y3,x2y3,x3y3]])
+print(A)
+str1=x1y1+x2y1+x3y1
+str2=x1y2+x2y2+x3y2
+str3=x1y3+x2y3+x3y3
+st1=x1y1+x2y1+x3y1
+st2=x1y2+x2y2+x3y2
+st3=x1y3+x2y3+x3y3
+d=x1y1+x2y2+x3y3
+if str1==str2==str3==st1==st2==st3==d:
+  print("Вы ввели магический квадрат Ло Шу)")
+else:
+    print("Нет это не магический квадрат(")
+3)
+def main():
+
+    name = input('Введите имя отчево и фамилию: ')
+    name_list = name.split()
+
+    for part in name_list:
+        print(part[0].upper() + ". ", end="")
+    print()
+
+main()
+4)Через раз выдается данная ошибка(UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd1 in position 2: invalid continuation byte).Не знаю как ее можно исправить
+
+import random
+list=["России","Украины","Беларуси","Польши","Литвы","Латвии"]
+listitem = random.randint(0,5)
+list[listitem]
+print ("Какая столица у",list[listitem],"?")
+v=input('Введите столицу (с большой буквы):')
+slovar = dict()
+slovar['России'] = 'Москва'
+slovar['Украины'] = 'Киев'
+slovar['Беларуси'] = 'Минск'
+slovar['Латвии'] = 'Рига'
+slovar['Литвы'] = 'Вильнюс'
+slovar['Польши'] = 'Варшава'
+o=slovar[list[listitem]]
+if o==v:
+    print("Правильный ответ)")
+else:
+    print("Вы не угадали( попробуйте еще раз")
+
+5)
+text = input("Введите текст: ").lower()
+gl = 0
+for vowel in 'ёуеыаоэяию':
+    gl += text.count(vowel)
+print("Колво гласных:",gl)
+sgl = 0
+for vowel in 'йцкнгшщзхфвпрлджчсмтб':
+    sgl += text.count(vowel)
+print("Колво согласных:",sgl)
+
