@@ -1,0 +1,102 @@
+1)
+x1y1=int(input('Число c координатами (x1y1):'))
+x2y1=int(input('Число c координатами (x2y1):'))
+x3y1=int(input('Число c координатами (x3y1):'))
+x1y2=int(input('Число c координатами (x1y2):'))
+x2y2=int(input('Число c координатами (x2y2):'))
+x3y2=int(input('Число c координатами (x3y2):'))
+t =[[x1y1,x2y1,x3y1], [x1y2,x2y2,x3y2]]
+x=0
+def neted_sum(t):
+    for i in range(len(t)):
+        for j in range(len(t[i])):
+            print(t[i][j], end=' ')
+        x=sum(t[i])
+        print()
+        print("Сумма ряда =",x)
+        
+neted_sum(t)
+2)
+x1=int(input('Первое число:'))
+x2=int(input('Второе число:'))
+x3=int(input('Третье число:'))
+list=[x1,x2,x3]
+s=0
+def cumsum(list):
+    for s in range(5):
+        s=sum(list)
+        list.append(s)
+        print(list)
+cumsum(list)
+3)
+x1=int(input('Первое число:'))
+x2=int(input('Второе число:'))
+x3=int(input('Третье число:'))
+x4=int(input('Четвертое число:'))
+x5=int(input('Пятое число:'))
+t=[x1,x2,x3,x4,x5]
+print(t)
+def middle(t):
+    del t[4]
+    del t[0]
+    print(t)
+middle(t)
+4)
+print('Вводите значения , нажимайте enter')
+print(' для завершения списка просто нажмите enter')
+a = int(input(' '))
+rices = []
+while True:
+    try:
+        rices.append(a)
+        a = int(input(' '))
+    except:
+        break
+print(rices)
+
+def middle(rices):
+    del rices[-1]
+    del rices[0]
+    print(rices)
+middle(rices)
+5)
+print('Возрастает или убывает спписок?')
+print('Введите список')
+print('Вводите значения , нажимайте enter')
+print(' для завершения списка просто нажмите enter')
+a = int(input(' '))
+rices = []
+while True:
+    try:
+        rices.append(a)
+        a = int(input(' '))
+    except:
+        break
+print(rices)
+if rices == sorted(rices):
+    print('Возрастает')
+if rices==sorted(rices, reverse = True):
+    print("Убывает")
+else:
+    print("И не возрастает -.- И не убывает")
+6)пробелы учтены
+t=[]
+t = input('Введите первое предложение: ')
+z=[]
+z=input('Введите предложение для проверки: ')
+t.replace(' ', '')
+z.replace(' ', '')
+res1 = sorted(t, key=lambda x: (isinstance(x, str), x))
+res2 = sorted(z, key=lambda x: (isinstance(x, str), x))
+if res1 == res2:
+    print('анограмма')
+else:
+    print('не анограмма')
+7)
+t=[]
+t = input('Введите строку для проверки дубликатов: ')
+t.replace(' ', '')
+res1 = sorted(t, key=lambda x: (isinstance(x, str), x))
+for i in range(0,len(res1)-1):
+               if res1[i] == res1[i+1]:
+                   print (res1[i], 'дублируются')
