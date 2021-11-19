@@ -1,0 +1,81 @@
+1)
+n=int(input('Введите n:'))
+print(n)
+def print_till_zero(n):
+    if n==1:
+        print('0')
+    else:
+        n=n-1
+        print(n)
+        print_till_zero(n)
+print_till_zero(n)
+2) пробелы учтены
+s=input('Введите слово для проверки:')
+print(s)
+s.replace(' ', '')
+s=list(s)
+def is_palindrome(s):
+    if len(s)==1:
+            print('полиндром')
+    if not s:
+            print('полиндром')
+    if len(s)>1:
+        if s[-1]==s[0]:
+            del s[-1]
+            del s[0]
+            is_palindrome(s)
+        else:
+            print('не полиндром')
+is_palindrome(s)
+3)
+def power(a,b):
+    if(b==0):
+        return 1
+    if(b % 2 != 0):
+        return power(a,b-1)*a
+    else:
+        k=power(a,b//2)
+        return k*k
+
+a=int(input('Число возводимое в степень:'))
+b=int(input('Число возведения в степень:'))
+print(power(a,b))
+4)
+print(' для завершения списка просто нажмите enter')
+t = int(input(' '))
+rices = []
+while True:
+    try:
+        rices.append(t)
+        t = int(input(' '))
+    except:
+        break
+print('Список:',rices)
+def find_max(arr, max_=None):
+    if max_ is None:
+        max_ = arr.pop()
+    current = arr.pop()
+    if current > max_:
+        max_ = current
+    if arr:
+        return find_max(arr, max_)
+    return max_
+result = find_max(rices)
+print('Максимальное число в списке:',result) 
+5)
+fib1 = 0
+fib2 = 1
+list=[0,1]
+n = input("Номер элемента ряда Фибоначчи: ")
+n = int(n)
+ 
+i = 0
+while i < n - 2:
+    fib_sum = fib1 + fib2
+    fib1 = fib2
+    fib2 = fib_sum
+    list.append(fib2)
+    i = i + 1
+print('Ряд:',list)
+print("Значение этого элемента:", fib2)
+6)
