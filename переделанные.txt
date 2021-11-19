@@ -1,0 +1,47 @@
+П-номер практики;Н-номер заддания
+П6Н3)
+print('Вводите значения , нажимайте enter')
+print(' для завершения списка просто нажмите enter')
+t = int(input(' '))
+rices = []
+while True:
+    try:
+        rices.append(t)
+        t = int(input(' '))
+    except:
+        break
+print(rices)
+def middle(t):
+    del rices[-1]
+    del rices[0]
+    print(rices)
+middle(t)
+П3Н6)
+print('Вводите значения , нажимайте enter')
+print(' для завершения списка просто нажмите enter')
+t = int(input(' '))
+rices = []
+while True:
+    try:
+        rices.append(t)
+        t = int(input(' '))
+    except:
+        break
+print('Исходный лист:',rices)
+rices=set(rices)
+print('Лист без повторений:',rices)
+x=len(rices)
+print('Кол-во неповторяющихся элементов списка:',x)
+П5Н6)
+def mostChar(word):
+    count = 0
+    ans=''
+    for i in word:
+        if(count < word.count(i)):
+            count=word.count(i)
+            ans=i
+    return ans
+
+word = input('Слово ')
+print('Часто используемый символ:',mostChar(word))
+
