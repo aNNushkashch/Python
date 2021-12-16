@@ -1,0 +1,126 @@
+1)
+from random import randint
+ 
+def bubble(array):
+    for i in range(N-1):
+        for j in range(N-i-1):
+            if array[j] > array[j+1]:
+                buff = array[j]
+                array[j] = array[j+1]
+                array[j+1] = buff
+ 
+N = 10
+a = []
+for i in range(10):
+    a.append(randint(1, 99))
+ 
+print(a)
+bubble(a)
+print(a)
+
+2)
+Сложность - 2n
+
+3)
+from random import randint
+a = []
+for i in range(10):
+    a.append(randint(1, 99))
+ 
+print(a)
+
+def count_sort(a):
+    m = min(a)
+    help_array = [0 for i in range(min(a),max(a) + 1)]
+    for item in a:
+        help_array[item - m] += 1
+    a.clear()
+    for item in help_array:
+        [a.append(m) for n in range(item)]
+        m += 1
+    return a
+
+print(count_sort(a))
+
+4)
+У сортировки подсчетом сложность O(n)
+
+5)
+from random import randint
+def bubble(array):
+    for i in range(N-1):
+        for j in range(N-i-1):
+            if array[j] > array[j+1]:
+                buff = array[j]
+                array[j] = array[j+1]
+                array[j+1] = buff
+N = 10
+a1 = []
+for i in range(10):
+    a1.append(randint(1, 99))
+print(a1) 
+bubble(a1)
+print(a1)
+
+
+from random import randint
+a = []
+for i in range(10):
+    a.append(randint(1, 99))
+ 
+print(a)
+
+def count_sort(a):
+    m = min(a)
+    help_array = [0 for i in range(min(a),max(a) + 1)]
+    for item in a:
+        help_array[item - m] += 1
+    a.clear()
+    for item in help_array:
+        [a.append(m) for n in range(item)]
+        m += 1
+    return a
+
+print(count_sort(a))
+print(sorted(a+a1))
+
+6)
+from random import randint
+def bubble(array):
+    for i in range(N-1):
+        for j in range(N-i-1):
+            if array[j] > array[j+1]:
+                buff = array[j]
+                array[j] = array[j+1]
+                array[j+1] = buff
+N = 10
+a1 = []
+for i in range(10):
+    a1.append(randint(1, 99))
+print(a1) 
+bubble(a1)
+print(a1)
+
+
+from random import randint
+a = []
+for i in range(10):
+    a.append(randint(1, 99))
+ 
+print(a)
+
+def count_sort(a):
+    m = min(a)
+    help_array = [0 for i in range(min(a),max(a) + 1)]
+    for item in a:
+        help_array[item - m] += 1
+    a.clear()
+    for item in help_array:
+        [a.append(m) for n in range(item)]
+        m += 1
+    return a
+
+print(count_sort(a))
+import operator
+
+print(sorted(operator.iadd(a,a1)))
