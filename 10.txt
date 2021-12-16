@@ -1,0 +1,46 @@
+1)
+n = input("Номер элемента ряда Фибоначчи: ")
+n = int(n)
+def fibbonachi(n):
+    if(n in [1,2]):
+        return 1
+    return fibbonachi(n - 1) + fibbonachi(n - 2)
+print('Число под номером',n,'=',fibbonachi(n))
+
+2)
+Сложность - 2*n
+
+3)
+fibbonachi_memory={
+    1:1,
+    2:1
+}
+n = input("Номер элемента ряда Фибоначчи: ")
+n = int(n)
+def fibbonachi(n):
+    result = fibbonachi_memory.get(n)
+    if(result is None):
+        result = fibbonachi(n - 1) + fibbonachi(n - 2)
+        fibbonachi_memory[n] = result
+    return result
+
+print('значение элемента под номером',n,'=',fibbonachi(n))
+
+4)
+Сложность - 1*n
+
+5)
+fib1 = 1
+fib2 = 1
+ 
+n = input("Номер элемента ряда Фибоначчи: ")
+n = int(n)
+ 
+i = 0
+while i < n - 2:
+    fib_sum = fib1 + fib2
+    fib1 = fib2
+    fib2 = fib_sum
+    i = i + 1
+ 
+print("Значение этого элемента =", fib2)
